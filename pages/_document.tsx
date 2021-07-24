@@ -30,7 +30,24 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <meta charSet="UTF-8" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta httpEquiv="X-UA-Compatible" content="chrome=1" />
+          <meta name="hostname" content="" />
+          <meta httpEquiv="Content-language" content="en-US" />
+          <meta name="robots" content="index, follow" />
+          <meta name="theme-color" content="#fff" />
+          <meta name="distribution" content="global" />
+          <meta name="author" content="Necritto" />
+          <meta name="publisher" content="Necritto" />
+          <meta name="copyright" content="Necritto" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

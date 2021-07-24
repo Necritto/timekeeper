@@ -1,3 +1,11 @@
-export default function Home() {
-  return <h1>Timekeeper</h1>;
-}
+import MainLayout from "layouts/main";
+
+const Home = () => {
+  return (
+    <MainLayout>
+      <h1>Timekeeper</h1>
+    </MainLayout>
+  );
+};
+
+export default Home;
