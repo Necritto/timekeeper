@@ -5,6 +5,7 @@ export const HeaderWrapper = styled.header`
   height: 80px;
   padding: 20px 0;
   box-shadow: 0px 5px 5px 2px rgba(26, 22, 22, 0.49);
+  flex: 0 0 auto;
 `;
 
 export const Logo = styled.div`

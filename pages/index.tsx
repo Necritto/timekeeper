@@ -1,13 +1,7 @@
-import MainLayout from "layouts/main";
+import React from "react";
 
-const Home = () => {
-  return (
-    <MainLayout>
-      <main>
-        <h1>Timekeeper</h1>
-      </main>
-    </MainLayout>
-  );
-};
+import MainPage from "./indexpage";
 
-export default Home;
+const IndexPage: React.FC = () => <MainPage />;
+
+export default IndexPage;

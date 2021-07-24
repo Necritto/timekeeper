@@ -1,10 +1,11 @@
+import React from "react";
 import Image from "next/image";
 
 import { Container } from "styles/global";
 
 import { HeaderWrapper, Logo, RouteButton } from "./styles";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <Container>

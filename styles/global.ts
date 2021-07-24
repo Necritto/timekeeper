@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     color: #ffffff;
@@ -15,10 +15,14 @@ export const GlobalStyle = createGlobalStyle`
     background: -webkit-linear-gradient(to right, #414345, #232526);
     background: linear-gradient(to right, #414345, #232526);
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 
-    header,
-    footer {
-      flex: 0 0 auto;
+    #__next {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
     }
 
     main {
