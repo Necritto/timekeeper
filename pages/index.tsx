@@ -3,7 +3,9 @@ import MainLayout from "layouts/main";
 const Home = () => {
   return (
     <MainLayout>
-      <h1>Timekeeper</h1>
+      <main>
+        <h1>Timekeeper</h1>
+      </main>
     </MainLayout>
   );
 };

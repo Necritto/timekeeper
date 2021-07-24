@@ -1,5 +1,15 @@
+import { Container } from "styles/global";
+
+import { FooterWrapper } from "./styles";
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <FooterWrapper>
+      <Container>
+        <p>&copy; {new Date().getFullYear()} by Aleksandr Voronkin</p>
+      </Container>
+    </FooterWrapper>
+  );
 };
 
 export default Footer;

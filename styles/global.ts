@@ -6,13 +6,24 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     color: #ffffff;
     background: #232526;
     background: -webkit-linear-gradient(to right, #414345, #232526);
     background: linear-gradient(to right, #414345, #232526);
     font-family: 'Montserrat', sans-serif;
+
+    header,
+    footer {
+      flex: 0 0 auto;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
   }
 `;
 
