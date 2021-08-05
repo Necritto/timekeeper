@@ -2,11 +2,12 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import PageTitle from "components/PageTitle";
-import CustomInput from "components/UI/Input";
+import CustomInput from "components/CustomInput";
 import MainLayout from "layouts/main";
 import { Container } from "styles/global";
 import { RootState } from "store/types";
 import { setProjectData } from "store/projects";
+import Stopwatch from "components/Stopwatch";
 
 const MainPage: React.FC = () => {
   const [projectTitle, setProjectTitle] = React.useState("");
@@ -34,6 +35,7 @@ const MainPage: React.FC = () => {
         <h1>Timekeeper</h1>
         <section>
           <CustomInput setProjectTitle={setProjectTitle} />
+          <Stopwatch />
           <ol>
             {projects.map((project) => {
               return (
