@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <FooterWrapper>
       <Container>
-        <p>&copy; {new Date().getFullYear()} by Aleksandr Voronkin</p>
+        <p>&copy; {new Date().getFullYear()} by Necritto</p>
       </Container>
     </FooterWrapper>
   );

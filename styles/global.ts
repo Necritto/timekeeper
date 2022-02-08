@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     color: #ffffff;
     background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
     background: linear-gradient(to right, #414345, #232526);
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -28,11 +27,15 @@ export const GlobalStyle = createGlobalStyle`
     main {
       flex: 1 0 auto;
     }
+
+    button, a {
+      cursor: pointer;
+    }
   }
 `;
 
 export const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;
 `;

@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
 
 import { Container } from "styles/global";
+import CustomImage from "components/CusomImage";
 
 import { HeaderWrapper, Logo, RouteButton } from "./styles";
 
@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     <HeaderWrapper>
       <Container>
         <Logo>
-          <Image src={require("./assets/clock.svg")} height={50} width={50} alt="Clock" />
+          <CustomImage path="/icons/clock.svg" height={50} width={50} alt="Clock" />
         </Logo>
         <RouteButton>Все дни</RouteButton>
       </Container>

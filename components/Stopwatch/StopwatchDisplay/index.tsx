@@ -2,13 +2,15 @@ import React from "react";
 
 import { StopwatchDisplayProps } from "types/stopwatch";
 
-const StopwatchDisplay: React.FC<StopwatchDisplayProps> = ({ currentTime }) => {
+import { DisplayWrapper, Digit, ColoredDigit } from "./styles";
+
+const StopwatchDisplay: React.FC<StopwatchDisplayProps> = ({ currentTime: { hours, minutes, seconds } }) => {
   return (
-    <div>
-      <span>
-        {currentTime.hours}:{currentTime.minutes}:{currentTime.seconds};
-      </span>
-    </div>
+    <DisplayWrapper>
+      <Digit>{hours}&nbsp;:&nbsp;</Digit>
+      <Digit>{minutes}&nbsp;:&nbsp;</Digit>
+      <ColoredDigit>{seconds}</ColoredDigit>
+    </DisplayWrapper>
   );
 };
 
