@@ -1,10 +1,10 @@
 import React from "react";
 
-import { CustomInputProps } from "types/customInput";
+import { UIInputPropsInterface } from "types/components/uiInput";
 
 import { InputContainer, Input, InputField, InputLabel, InputLabelContent } from "./styles";
 
-const CustomInput: React.FC<CustomInputProps> = ({ setProjectTitle }) => {
+const UIInput: React.FC<UIInputPropsInterface> = ({ setValue, label = "Project for tracking" }) => {
   const [isFocused, setIsFocused] = React.useState(false);
   const [inputValue, setInputValue] = React.useState("");
 
@@ -22,7 +22,7 @@ const CustomInput: React.FC<CustomInputProps> = ({ setProjectTitle }) => {
     if (code !== "Enter") return;
     if (inputValue.trim() === "") return;
 
-    setProjectTitle(inputValue);
+    setValue(inputValue);
     setInputValue("");
   };
 
@@ -39,11 +39,11 @@ const CustomInput: React.FC<CustomInputProps> = ({ setProjectTitle }) => {
           onKeyPress={(event) => onSendHandler(event.code)}
         />
         <InputLabel isFocus={isFocused} htmlFor="input">
-          <InputLabelContent isFocus={isFocused}>Проект для трекинга</InputLabelContent>
+          <InputLabelContent isFocus={isFocused}>{label}</InputLabelContent>
         </InputLabel>
       </Input>
     </InputContainer>
   );
 };
 
-export default React.memo(CustomInput);
+export default React.memo(UIInput);

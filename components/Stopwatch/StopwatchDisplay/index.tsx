@@ -1,10 +1,10 @@
 import React from "react";
 
-import { StopwatchDisplayProps } from "types/stopwatch";
+import { StopwatchDisplayPropsInterface } from "types/components/stopwatch";
 
 import { DisplayWrapper, Digit, ColoredDigit } from "./styles";
 
-const StopwatchDisplay: React.FC<StopwatchDisplayProps> = ({ currentTime: { hours, minutes, seconds } }) => {
+const StopwatchDisplay: React.FC<StopwatchDisplayPropsInterface> = ({ currentTime: { hours, minutes, seconds } }) => {
   return (
     <DisplayWrapper>
       <Digit>{hours}&nbsp;:&nbsp;</Digit>

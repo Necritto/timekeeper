@@ -1,8 +1,8 @@
 import React from "react";
 
-import { UseTimer } from "types/useTimer";
+import { UseTimerInterface } from "types/hooks/useTimer";
 
-export const useTimer = (initialTime: number = 0): UseTimer => {
+export const useTimer = (initialTime: number = 0): UseTimerInterface => {
   const [isActive, setIsActive] = React.useState(false);
   const [isPaused, setIsPaused] = React.useState(true);
   const [timer, setTimer] = React.useState(initialTime);

@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 
-import { PageTitleProps } from "types/pageTitle";
+import { PageTitlePropsInterface } from "types/common/pageTitle";
 
-const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
+const PageTitle: React.FC<PageTitlePropsInterface> = ({ title }) => {
   return (
     <Head>
       <title>{title}</title>

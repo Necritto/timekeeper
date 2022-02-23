@@ -1,4 +1,4 @@
-export interface StopwatchDisplayProps {
+export interface StopwatchDisplayPropsInterface {
   currentTime: {
     hours: string;
     minutes: string;
@@ -6,7 +6,7 @@ export interface StopwatchDisplayProps {
   };
 }
 
-export interface ControlButtonsProps {
+export interface ControlButtonsPropsInterface {
   isActive: boolean;
   isPaused: boolean;
   handleStart: () => void;

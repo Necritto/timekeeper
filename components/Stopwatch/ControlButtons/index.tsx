@@ -1,11 +1,11 @@
 import React from "react";
 
-import CustomImage from "components/CusomImage";
-import { ControlButtonsProps } from "types/stopwatch";
+import UIImage from "components/UI/UIImage";
+import { ControlButtonsPropsInterface } from "types/components/stopwatch";
 
 import { ControlsWrapper, ControlButton } from "./styles";
 
-const ControlButtons: React.FC<ControlButtonsProps> = ({
+const ControlButtons: React.FC<ControlButtonsPropsInterface> = ({
   isActive,
   isPaused,
   handleStart,
@@ -17,20 +17,20 @@ const ControlButtons: React.FC<ControlButtonsProps> = ({
       {isActive ? (
         <ControlsWrapper>
           <ControlButton onClick={handleReset}>
-            <CustomImage path="/icons/reset.svg" alt="reset" />
+            <UIImage path="/icons/reset.svg" alt="reset" />
           </ControlButton>
           <ControlButton onClick={handlePauseResume}>
             {isPaused ? (
-              <CustomImage path="/icons/start.svg" height={29} width={29} alt="start" />
+              <UIImage path="/icons/start.svg" height={29} width={29} alt="start" />
             ) : (
-              <CustomImage path="/icons/pause.svg" alt="pause" />
+              <UIImage path="/icons/pause.svg" alt="pause" />
             )}
           </ControlButton>
         </ControlsWrapper>
       ) : (
         <ControlsWrapper>
           <ControlButton onClick={handleStart}>
-            <CustomImage path="/icons/start.svg" height={29} width={29} alt="start" />
+            <UIImage path="/icons/start.svg" height={29} width={29} alt="start" />
           </ControlButton>
         </ControlsWrapper>
       )}
