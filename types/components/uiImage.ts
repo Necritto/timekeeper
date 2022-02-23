@@ -1,4 +1,4 @@
-export interface CustomImageProps {
+export interface UIImagePropsInterface {
   path: string;
   height?: number;
   width?: number;

@@ -1,6 +1,6 @@
 import { ThunkAction } from "redux-thunk";
 
-import { ProjectsInterface } from "types/projectsReducer";
+import { ProjectsInterface } from "types/store/projectsReducer";
 
 export interface RootState {
   projects: ProjectsInterface;

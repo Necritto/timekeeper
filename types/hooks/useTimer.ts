@@ -1,4 +1,4 @@
-export interface UseTimer {
+export interface UseTimerInterface {
   timer: number;
   isActive: boolean;
   isPaused: boolean;

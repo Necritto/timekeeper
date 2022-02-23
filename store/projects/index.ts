@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { ProjectInterface, ProjectsInterface } from "types/projectsReducer";
+import { ProjectInterface, ProjectsInterface } from "types/store/projectsReducer";
 
 const initialState: ProjectsInterface = {
   projects: [],
