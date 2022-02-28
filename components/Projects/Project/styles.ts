@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const ProjectItem = styled.li`
   height: 60px;
   width: 100%;
-  max-width: 49%;
-  background: #6a7989;
+  max-width: 100%;
+  min-width: 300px;
+  background: var(--backgroundColor);
   padding: 12px 24px;
   border-radius: 12px;
   counter-increment: number;

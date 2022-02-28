@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 type InputProps = {
   isFocus?: boolean;
+  maxLength?: number;
 };
 
 export const InputContainer = styled.div`
@@ -31,7 +32,7 @@ export const InputField = styled.input`
   border: none;
   border-radius: 0;
   background: transparent;
-  color: #ee3769;
+  color: var(--red);
   font-size: 1.55em;
   font-weight: bold;
   -webkit-appearance: none;
@@ -47,7 +48,7 @@ export const InputLabel = styled.label<InputProps>`
   margin: 1.2em 0;
   width: 100%;
   height: calc(100% - 2.4em);
-  color: #6a7989;
+  color: var(--backgroundColor);
   font-weight: bold;
   font-size: 70.25%;
   -webkit-font-smoothing: antialiased;
@@ -63,7 +64,7 @@ export const InputLabel = styled.label<InputProps>`
     left: 0;
     width: 100%;
     height: 2px;
-    background: #6a7989;
+    background: var(--backgroundColor);
     transition: transform 0.3s;
   }
 
@@ -85,5 +86,5 @@ export const InputLabelContent = styled.span<InputProps>`
   width: 100%;
   transition: all 0.3s;
   transform: ${(props) => (props.isFocus ? "translate3d(0, -90%, 0)" : "")};
-  color: ${(props) => (props.isFocus ? "#ee3769" : "#6a7989")};
+  color: ${(props) => (props.isFocus ? "var(--red)" : "var(--backgroundColor)")};
 `;
