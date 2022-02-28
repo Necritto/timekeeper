@@ -10,9 +10,9 @@ export const DisplayWrapper = styled.div`
 
 export const Digit = styled.span`
   font-size: 1.5rem;
-  color: #f5f5f5;
+  color: var(--white);
 `;
 
 export const ColoredDigit = styled(Digit)`
-  color: #ee3769;
+  color: var(--red);
 `;

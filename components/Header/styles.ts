@@ -3,34 +3,36 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.header`
   position: relative;
   height: 80px;
-  padding: 20px 0;
-  box-shadow: 0px 5px 5px 2px rgba(26, 22, 22, 0.49);
+  padding: 16px 0;
+  box-shadow: 0px 5px 5px 2px var(--shadowColor);
   flex: 0 0 auto;
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Logo = styled.div`
   width: 50px;
   height: 50px;
   filter: invert();
-  transform: translatey(-5px);
 `;
 
 export const RouteButton = styled.a`
-  position: absolute;
-  top: 0;
-  right: 20px;
-  bottom: 0;
-  margin: auto;
+  display: inline-block;
+  position: relative;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid #ee3769;
+  border: 1px solid var(--red);
   border-radius: 8px;
   height: 2.8em;
   width: 10em;
   padding: 0;
   outline: none;
   overflow: hidden;
-  color: #ee3769;
+  color: var(--red);
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
   line-height: 250%;
@@ -55,10 +57,10 @@ export const RouteButton = styled.a`
   }
 
   &:hover {
-    color: #fff;
+    color: var(--white);
 
     &::before {
-      box-shadow: inset 0 0 0 10em #ee3769;
+      box-shadow: inset 0 0 0 10em var(--red);
     }
   }
 `;

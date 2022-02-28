@@ -4,7 +4,7 @@ import { UIInputPropsInterface } from "types/components/uiInput";
 
 import { InputContainer, Input, InputField, InputLabel, InputLabelContent } from "./styles";
 
-const UIInput: React.FC<UIInputPropsInterface> = ({ setValue, label = "Project for tracking" }) => {
+const UIInput: React.FC<UIInputPropsInterface> = ({ setValue, label = "Project for tracking", maxLength = 20 }) => {
   const [isFocused, setIsFocused] = React.useState(false);
   const [inputValue, setInputValue] = React.useState("");
 
@@ -33,6 +33,7 @@ const UIInput: React.FC<UIInputPropsInterface> = ({ setValue, label = "Project f
           type="text"
           id="input"
           value={inputValue}
+          maxLength={maxLength}
           onFocus={() => setIsFocused(true)}
           onBlur={onBlurHandler}
           onChange={onChangeHandler}

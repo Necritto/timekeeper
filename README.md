@@ -1,1 +1,1 @@
-## Teme tracking application
+## Time tracking application

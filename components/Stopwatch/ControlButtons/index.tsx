@@ -17,11 +17,11 @@ const ControlButtons: React.FC<ControlButtonsPropsInterface> = ({
       {isActive ? (
         <ControlsWrapper>
           <ControlButton onClick={handleReset}>
-            <UIImage path="/icons/reset.svg" alt="reset" />
+            <UIImage path="/icons/stop.svg" alt="stop" />
           </ControlButton>
           <ControlButton onClick={handlePauseResume}>
             {isPaused ? (
-              <UIImage path="/icons/start.svg" height={29} width={29} alt="start" />
+              <UIImage path="/icons/start.svg" alt="start" />
             ) : (
               <UIImage path="/icons/pause.svg" alt="pause" />
             )}
@@ -30,7 +30,7 @@ const ControlButtons: React.FC<ControlButtonsPropsInterface> = ({
       ) : (
         <ControlsWrapper>
           <ControlButton onClick={handleStart}>
-            <UIImage path="/icons/start.svg" height={29} width={29} alt="start" />
+            <UIImage path="/icons/start.svg" alt="start" />
           </ControlButton>
         </ControlsWrapper>
       )}
