@@ -1,3 +1,4 @@
+import { v4 } from "uuid";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { ProjectInterface, ProjectsInterface } from "types/store/projectsReducer";
@@ -19,11 +20,26 @@ const projectsSlice = createSlice({
         workedTime: ProjectInterface["workedTime"];
       }>,
     ) => {
-      state.projects.push(payload);
+      state.projects.push({
+        _id: v4(),
+        ...payload,
+      });
+    },
+    setWorkedTime: (
+      state,
+      {
+        payload,
+      }: PayloadAction<{
+        _id: ProjectInterface["_id"];
+        workedTime: ProjectInterface["workedTime"];
+      }>,
+    ) => {
+      const currentProject = state.projects.find((project) => project._id === payload._id);
+      currentProject!.workedTime = payload.workedTime;
     },
   },
 });
 
-export const { setProjectData } = projectsSlice.actions;
+export const { setProjectData, setWorkedTime } = projectsSlice.actions;
 
 export default projectsSlice.reducer;

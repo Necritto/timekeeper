@@ -2,7 +2,11 @@ export interface ProjectsInterface {
   projects: ProjectInterface[];
 }
 
-export interface ProjectInterface {
+export interface ProjectInterfaceDTO {
   title: string;
-  workedTime: string;
+  workedTime: number;
+}
+
+export interface ProjectInterface extends ProjectInterfaceDTO {
+  _id: string;
 }
