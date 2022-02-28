@@ -7,4 +7,4 @@ const UIImage: React.FC<UIImagePropsInterface> = ({ path, height = 26, width = 2
   return <Image src={path} height={height} width={width} alt={alt} />;
 };
 
-export default UIImage;
+export default React.memo(UIImage);

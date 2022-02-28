@@ -8,7 +8,7 @@ import MainLayout from "layouts/main";
 import { Container } from "styles/global";
 import { RootState } from "store/types";
 import { setProjectData } from "store/projects";
-import { ProjectInterface } from "types/store/projectsReducer";
+import { ProjectInterfaceDTO } from "types/store/projectsReducer";
 
 const MainPage: React.FC = () => {
   const [projectTitle, setProjectTitle] = React.useState("");
@@ -17,9 +17,9 @@ const MainPage: React.FC = () => {
   const { projects } = useSelector((state: RootState) => state.projects);
 
   React.useEffect(() => {
-    const newProject: ProjectInterface = {
+    const newProject: ProjectInterfaceDTO = {
       title: projectTitle,
-      workedTime: "",
+      workedTime: 0,
     };
 
     if (!!projectTitle) {
